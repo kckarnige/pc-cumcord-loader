@@ -6,7 +6,7 @@ module.exports = class Remount extends Plugin {
     // Fetch cumcord with caching disabled (for latest builds!!!)
     const noStore = { cache: "no-store" };
     const response = await fetch(
-      "https://raw.githubusercontent.com/Cumcord/Cumcord/master/dist/build.js",
+      "https://raw.githubusercontent.com/GooseMod/GooseMod/dist-prod/goosemod.js",
       noStore
     );
     const text = await response.text();
@@ -15,6 +15,6 @@ module.exports = class Remount extends Plugin {
 
   pluginWillUnload() {
     console.log("Unloaded!");
-    cumcord.uninject();
+    goosemod.uninject();
   }
 };
