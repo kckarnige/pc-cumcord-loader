@@ -5,7 +5,7 @@ module.exports = class Remount extends Plugin {
     console.log("Loaded!")
     const noStore = { cache: "no-store" };
     const response = await fetch(
-      "https://raw.githubusercontent.com/GooseMod/GooseMod/dist-prod/goosemod.en-US.js",
+      "https://raw.githubusercontent.com/GooseMod/GooseMod/dist-prod/index.js",
       noStore
     );
     const text = await response.text();
